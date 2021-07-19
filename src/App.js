@@ -1,20 +1,22 @@
 import Topbar from './components/Topbar';
 import Editor from './components/Editor';
 import Preview from './components/Preview';
-
+import { BrowserRouter as Router } from 'react-router-dom';
 import { MarkdownContextProvider } from './context/MarkdownContext';
 
 function App() {
 	return (
-		<MarkdownContextProvider>
-			<div className="App">
-				<Topbar />
-				<div className="main">
-					<Editor />
-					<Preview />
+		<Router>
+			<MarkdownContextProvider>
+				<div className="App">
+					<Topbar />
+					<div className="main">
+						<Editor />
+						<Preview />
+					</div>
 				</div>
-			</div>
-		</MarkdownContextProvider>
+			</MarkdownContextProvider>
+		</Router>
 	);
 }
 

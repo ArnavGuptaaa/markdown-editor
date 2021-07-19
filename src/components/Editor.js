@@ -1,4 +1,3 @@
-import NavigateNextRoundedIcon from '@material-ui/icons/NavigateNextRounded';
 import { useContext } from 'react';
 import { MarkdownContext } from '../context/MarkdownContext';
 

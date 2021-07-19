@@ -31,7 +31,12 @@ body {
 	justify-content: space-between;
 	align-items: center;
 }
-
+.topbar-container a {
+	font-size: 12px;
+	text-decoration: none;
+	color: var(--font-main);
+	text-align: center;
+}
 .topbar-container > h1 {
 	cursor: pointer;
 }
@@ -50,8 +55,6 @@ body {
 	flex-direction: column;
 	cursor: pointer;
 	padding: 5px;
-	align-items: stretch;
-	align-items: center;
 	transition: ease-in-out 0.4s;
 }
 
@@ -84,11 +87,12 @@ body {
 	background: var(--background);
 	color: var(--font-main);
 	border: 1px solid var(--background);
+	padding: 10px;
 }
 
 /* Preview */
 .markdown-preview-container {
-	padding-left: 15px;
+	padding: 15px;
 	width: 50%;
 	height: 88vh;
 	background: #050505;
