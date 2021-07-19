@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+	--background: #121212;
+	--surface: #1f1f1f;
+	--font-main: #fff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background: var(--background);
+	color: var(--font-main);
+}
+
+/* TopBar */
+.topbar-container {
+	width: 100%;
+	background-color: var(--surface);
+	color: var(--font-main);
+	padding: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.topbar-container > h1 {
+	cursor: pointer;
+}
+
+.buttons {
+	width: 15%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 15px;
+	list-style-type: none;
+}
+
+.buttons > li {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	padding: 5px;
+	align-items: stretch;
+	align-items: center;
+	transition: ease-in-out 0.4s;
+}
+
+.buttons > li:hover {
+	transform: scale(1.05);
+}
+
+.buttons > li > p {
+	text-align: center;
+	font-size: 12px;
+	margin: 5px 0;
+}
+
+.main {
+	display: flex;
+}
+/* Editor */
+.markdown-editor-container {
+	width: 50%;
+	height: 88vh;
+	position: relative;
+}
+
+#md-input {
+	width: 100%;
+	height: 100%;
+	resize: none;
+	outline: none;
+	font-size: large;
+	background: var(--background);
+	color: var(--font-main);
+	border: 1px solid var(--background);
+}
+
+/* Preview */
+.markdown-preview-container {
+	padding-left: 15px;
+	width: 50%;
+	height: 88vh;
+	background: #050505;
+	white-space: pre-line;
+}
+
+.markdown-preview-container a {
+	color: #01a4f2;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 840px) {
+	.buttons > li > p {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.topbar-container {
+		font-size: 10px;
+	}
+}
